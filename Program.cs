@@ -23,10 +23,7 @@ namespace Lotto
                 int input3 = int.Parse(Console.ReadLine());
                 int input4 = int.Parse(Console.ReadLine());
                 int input5 = int.Parse(Console.ReadLine());
-
-
-            
-             
+                        
 
             List<int> usrNum = new List<int>(5);
             
@@ -60,6 +57,7 @@ namespace Lotto
             }
             numbers.Sort();
 
+            //Match counter
             int matches = 0;
             for (int i = 0; i < 5; i++)
             {
@@ -79,7 +77,6 @@ namespace Lotto
             Console.WriteLine("\n\n");
 
 
-            //Match counter
             Console.WriteLine($"You have {matches} matches!");
 
             switch (matches)
@@ -103,6 +100,11 @@ namespace Lotto
             if (restart == "restart" || restart == "Restart" || restart == "RESTART")
             {
                 Console.WriteLine("\n\n\n The game is restarted! \n\n\n");
+                input1 = 0;
+                input2 = 0;
+                input3 = 0;
+                input4 = 0;
+                input5 = 0;
                 Main();
             }
 
